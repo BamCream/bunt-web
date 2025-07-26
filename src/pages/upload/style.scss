@@ -1,0 +1,69 @@
+.uploadPage {
+  padding: 20px;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 8px 4px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}
+
+.uploadBox {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.previewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.previewItem {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
