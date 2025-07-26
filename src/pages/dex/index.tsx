@@ -17,14 +17,6 @@ const Dex = () => {
       </div>
 
       <div className="filterSection">
-        <div className="categoryButtons">
-          {categories.map((category) => (
-            <button key={category} className="categoryBtn">
-              {category}
-            </button>
-          ))}
-        </div>
-
         <Select
           items={TEAM_LIST}
           value={isSelected}
