@@ -2,7 +2,7 @@ import './style.scss'
 import { Select } from '@b1nd/b1nd-dodamdodam-ui'
 import { TEAM_LIST } from 'src/constants/team/team.constants'
 import { useDex } from 'src/hooks/dict/useDict'
-import GoodsCard from './goodCards'
+import GoodsCard from '../../components/ui/dex/goodCards'
 
 const Dex = () => {
   const { isSelected, setIsSelected } = useDex()
