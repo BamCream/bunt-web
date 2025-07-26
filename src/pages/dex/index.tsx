@@ -27,7 +27,7 @@ const Dex = () => {
       </div>
 
       <div className="goodsGrid">
-        {Array.from({ length: 12 }).map((_, index) => (
+        {Array.from({ length: 40 }).map((_, index) => (
           <GoodsCard
             key={index}
             imageUrl="https://kbomarket.com/web/product/big/20250320/97ca84111d5abbf59f245c4d24289547.jpg"
