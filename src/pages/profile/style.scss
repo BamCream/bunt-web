@@ -1,0 +1,142 @@
+.profilePage {
+  padding: 16px;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+
+  .info {
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .team {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+
+  .tabs {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+
+    button {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &.selected {
+        background: black;
+        color: white;
+      }
+    }
+  }
+}
+
+.recordSection {
+  margin-bottom: 24px;
+
+  .recordBox {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 12px;
+
+    .header,
+    .data {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .winRate {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
+
+.dexSection {
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  .dexFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .categoryBtns {
+      button {
+        margin-right: 8px;
+        padding: 4px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #f1f1f1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dexGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .dexCard {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 6px;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      .desc {
+        font-size: 12px;
+        color: #666;
+      }
+
+      .status {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.postGridSection {
+  .postGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .postPlaceholder {
+    background-color: #ddd;
+    aspect-ratio: 1;
+    border-radius: 8px;
+  }
+}
