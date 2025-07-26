@@ -1,15 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { path } from 'src/constants/path/path'
-import PageTemplate from 'src/components/common/pageSection'
-import Dict from 'src/components/ui/dict'
+import SidebarLayout from '../layout/index'
+import Dex from 'src/components/ui/dex'
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* 나중에 상수형으로 수정 */}
-        <Route path="/" element={<PageTemplate />}></Route>
-        <Route path="/dict" element={<Dict />} />
+        <Route element={<SidebarLayout />}>
+          <Route index element={<div>Home Page</div>} />
+          <Route path="dex" element={<Dex />} />
+          <Route path="record" element={<div>Record Page</div>} />
+          <Route path="upload" element={<div>Upload Page</div>} />
+          <Route path="profile" element={<div>Profile Page</div>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

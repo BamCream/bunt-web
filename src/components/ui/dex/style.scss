@@ -5,6 +5,7 @@
 
 .pageTemplate {
   @include flex-column;
+  padding: 1.5rem;
 }
 
 .titleWrap {
@@ -23,8 +24,8 @@
   border-radius: var(--small);
   background-color: var(--Static-Black);
 
-  width: 10%;
-  height: 100%;
+  width: 8rem;
+  height: 2rem;
 
   color: var(--Static-White);
 }

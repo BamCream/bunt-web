@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const useDict = () => {
+export const useDex = () => {
   const [isSelected, setIsSelected] = useState<string>('')
 
   return {

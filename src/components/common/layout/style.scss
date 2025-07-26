@@ -1,9 +1,0 @@
-@use 'src/styles/function/function' as *;
-
-.layout {
-  @include flex-column;
-  gap: 24px;
-  width: 100vw;
-  height: 100vh;
-  padding: 20px;
-}

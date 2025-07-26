@@ -1,11 +1,13 @@
-import './style.scss'
+import { Outlet } from 'react-router-dom'
+import Sidebar from '../sidebar/index'
 
-interface LayoutProps {
-  children: React.ReactNode
-}
+const SidebarLayout = () => (
+  <div style={{ display: 'flex' }}>
+    <Sidebar />
+    <main style={{ flex: 1, paddingLeft: '15rem', height: '100vh' }}>
+      <Outlet />
+    </main>
+  </div>
+)
 
-const Layout = ({ children }: LayoutProps) => {
-  return <div className="layout">{children}</div>
-}
-
-export default Layout
+export default SidebarLayout
