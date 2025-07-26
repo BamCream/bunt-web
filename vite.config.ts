@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
@@ -9,16 +9,16 @@ export default defineConfig({
       scss: {
         additionalData: (content, filename) => {
           if (filename.endsWith('global.scss')) {
-            return content;
+            return content
           }
-          return `@use "src/styles/global.scss" as *;\n${content}`;
-        }
-      }
-    }
+          return `@use "src/styles/global.scss" as *;\n${content}`
+        },
+      },
+    },
   },
   resolve: {
     alias: {
-      "src": path.resolve(__dirname, "src")
-    }
-  }
-});
+      src: path.resolve(__dirname, 'src'),
+    },
+  },
+})
