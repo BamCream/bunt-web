@@ -1,32 +1,33 @@
-.uploadPage {
-  padding: 20px;
+@use "src/styles/function/function" as *;
+@use "src/styles/typography/typography" as *;
 
-  h1 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
+.uploadPage {
+  @include flex-column;
+  padding: 20px;
+  gap: 20px;
+
+  h1 {@include headline2-bold;}
 }
 
 .formGroup {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  @include flex-column;
 
   label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 6px;
+    @include label-bold;
   }
 
   input {
     border: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid var(--Line-Normal);
     padding: 8px 4px;
-    font-size: 14px;
+    @include body-medium;
 
     &::placeholder {
-      color: #aaa;
+      color: var(--Label-Neutral);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -35,14 +36,12 @@
   margin-bottom: 20px;
 
   label {
-    display: block;
+    @include flex-center;
     width: 100%;
     height: 120px;
-    border: 1px solid #999;
+    border: 1px solid var(--Line-Normal) ;
     border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 600;
     cursor: pointer;
   }
@@ -55,9 +54,10 @@
 }
 
 .previewItem {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border: 1px solid #aaa;
+  border: 1px solid var(--Line-Normal);
   border-radius: 8px;
   overflow: hidden;
 
@@ -65,5 +65,25 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .imageActions {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+
+    button {
+      @include flex-center;
+      @include body-bold;
+      background-color: red;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 }

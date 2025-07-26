@@ -6,11 +6,31 @@ const Upload = () => {
   const [description, setDescription] = useState('')
   const [tag, setTag] = useState('')
   const [images, setImages] = useState<File[]>([])
+  const [replaceIndex, setReplaceIndex] = useState<number | null>(null)
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return
     const files = Array.from(e.target.files)
-    setImages([...images, ...files])
+
+    // 이미지 교체 모드일 때
+    if (replaceIndex !== null) {
+      const newImages = [...images]
+      newImages[replaceIndex] = files[0]
+      setImages(newImages)
+      setReplaceIndex(null)
+    } else {
+      setImages([...images, ...files])
+    }
+  }
+
+  const handleImageDelete = (index: number) => {
+    setImages(images.filter((_, i) => i !== index))
+  }
+
+  const handleImageReplace = (index: number) => {
+    setReplaceIndex(index)
+    const input = document.getElementById('uploadInput')
+    if (input) input.click()
   }
 
   return (
@@ -53,7 +73,7 @@ const Upload = () => {
           type="file"
           id="uploadInput"
           accept="image/*"
-          multiple
+          multiple={replaceIndex === null}
           onChange={handleImageUpload}
           hidden
         />
@@ -63,6 +83,9 @@ const Upload = () => {
         {images.map((file, index) => (
           <div key={index} className="previewItem">
             <img src={URL.createObjectURL(file)} alt={`preview-${index}`} />
+            <div className="imageActions">
+              <button onClick={() => handleImageDelete(index)}>X</button>
+            </div>
           </div>
         ))}
       </div>
@@ -70,4 +93,4 @@ const Upload = () => {
   )
 }
 
-export default Upload
+export default Upload;
