@@ -1,0 +1,38 @@
+.goodsContainer {
+  aspect-ratio: 1 / 1.2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+  transition: opacity 0.3s;
+}
+
+.goodsContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.goodsContainer.locked {
+  opacity: 0.4;
+}
+
+.goodsInfo h3 {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.goodsInfo p {
+  font-size: 12px;
+  color: #555;
+}

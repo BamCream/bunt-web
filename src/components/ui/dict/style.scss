@@ -34,7 +34,20 @@
   height: 95%;
 
   @include flex-column;
-  @include flex-wrap;
 }
 
+.categoryWrap {
+  @include flex-between;
+  justify-content: flex-end;
+  width: 100%;
+  height: 10%;
+  padding-top: 10px;
+}
 
+.goodsListWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  width: 100%;
+  padding: 20px 0px;
+}
