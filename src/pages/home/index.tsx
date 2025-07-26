@@ -18,7 +18,11 @@ const Home = () => {
             <div className="username">@{post.username}</div>
             <img src={post.image} alt="post" className="postImage" />
             <div className="postTitle">{post.title}</div>
-            <div className="postContent">{post.content}</div>
+            <div className="postContent">
+              {post.content.length > 150
+                ? `${post.content.slice(0, 150)}...`
+                : post.content}
+            </div>
             <div className="postDate">{post.date}</div>
           </div>
         ))}

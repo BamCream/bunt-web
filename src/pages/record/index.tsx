@@ -3,15 +3,15 @@ import './style.scss'
 import dateIcon from 'src/assets/images/record/date.svg'
 import stadiumIcon from 'src/assets/images/record/stadium.svg'
 
-const Record = () => {
-  const recordData = {
-    games: 7,
-    wins: 4,
-    draws: 1,
-    losses: 2,
-    winRate: 57,
-  }
+export const recordData = {
+  games: 7,
+  wins: 4,
+  draws: 1,
+  losses: 2,
+  winRate: 57,
+}
 
+const Record = () => {
   const matches = [
     {
       id: 1,

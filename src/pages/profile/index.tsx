@@ -2,6 +2,7 @@ import './style.scss'
 import { Select } from '@b1nd/b1nd-dodamdodam-ui'
 import { TEAM_LIST } from 'src/constants/team/team.constants'
 import { useState } from 'react'
+import { recordData } from '../record/index'
 
 const Profile = () => {
   const [team, setTeam] = useState(TEAM_LIST[0])
@@ -61,11 +62,11 @@ const Profile = () => {
                 <span>승률</span>
               </div>
               <div className="data">
-                <span>20</span>
-                <span>20</span>
-                <span>0</span>
-                <span>0</span>
-                <span className="winRate">100%</span>
+                <span>{recordData.games}</span>
+                <span>{recordData.wins}</span>
+                <span>{recordData.draws}</span>
+                <span>{recordData.losses}</span>
+                <span className="winRate">{recordData.winRate}%</span>
               </div>
             </div>
           </section>
