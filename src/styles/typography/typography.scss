@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Pretendard-Bold';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
     format('woff');
@@ -25,6 +33,12 @@
 @mixin display1-bold {
   font-size: 36px;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+@mixin display1-semibold {
+  font-size: 36px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -46,6 +60,12 @@
   letter-spacing: 0;
 }
 
+@mixin display2-semibold {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 @mixin display2-medium {
   font-size: 32px;
   font-weight: 500;
@@ -61,6 +81,12 @@
 @mixin title1-bold {
   font-size: 28px;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+@mixin title1-semibold {
+  font-size: 28px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -82,6 +108,12 @@
   letter-spacing: 0;
 }
 
+@mixin title2-semibold {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 @mixin title2-medium {
   font-size: 24px;
   font-weight: 500;
@@ -97,6 +129,12 @@
 @mixin headline1-bold {
   font-size: 20px;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+@mixin headline1-semibold {
+  font-size: 20px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -118,6 +156,12 @@
   letter-spacing: 0;
 }
 
+@mixin headline2-semibold {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 @mixin headline2-medium {
   font-size: 18px;
   font-weight: 500;
@@ -133,6 +177,12 @@
 @mixin body-bold {
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+@mixin body-semibold {
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -154,6 +204,12 @@
   letter-spacing: 0;
 }
 
+@mixin label-semibold {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 @mixin label-medium {
   font-size: 14px;
   font-weight: 500;
@@ -169,6 +225,12 @@
 @mixin caption-bold {
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+@mixin caption-semibold {
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 

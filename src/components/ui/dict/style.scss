@@ -1,3 +1,40 @@
 @use 'src/styles/function/function.scss' as *;
 @use 'src/styles/color/semantic.scss' as *;
 @use 'src/styles/typography/typography.scss' as *;
+@use 'src/styles/shape/shape.scss' as *;
+
+.pageTemplate {
+  @include flex-column;
+}
+
+.titleWrap {
+  @include flex-between;
+  width: 100%;
+  height: 5%;
+}
+
+.title {
+  @include display1-semibold;
+}
+
+.registCodeBtn {
+  @include label-semibold;
+
+  border-radius: var(--small);
+  background-color: var(--Static-Black);
+
+  width: 10%;
+  height: 100%;
+
+  color: var(--Static-White);
+}
+
+.goodsWrap {
+  width: 100%;
+  height: 95%;
+
+  @include flex-column;
+  @include flex-wrap;
+}
+
+

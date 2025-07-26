@@ -19,3 +19,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin flex-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
