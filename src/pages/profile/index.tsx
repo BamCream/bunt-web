@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const Profile = () => {
   const [team, setTeam] = useState(TEAM_LIST[0])
-  const [isSelected, setIsSelected] = useState<boolean>(true)
+  const [isSelected, setIsSelected] = useState<boolean>(false)
 
   const dexItems = [
     { id: 1, name: "Men's Los Angeles", unlocked: false },
@@ -26,13 +26,13 @@ const Profile = () => {
         </div>
         <div className="tabs">
           <button
-            className={isSelected ? 'selected' : ''}
+            className={!isSelected ? 'selected' : ''}
             onClick={() => setIsSelected(true)}
           >
             게시물
           </button>
           <button
-            className={!isSelected ? 'selected' : ''}
+            className={isSelected ? 'selected' : ''}
             onClick={() => setIsSelected(false)}
           >
             스탯
@@ -73,11 +73,6 @@ const Profile = () => {
           <section className="dexSection">
             <h2>나의 도감</h2>
             <div className="dexFilter">
-              <div className="categoryBtns">
-                <button>모자</button>
-                <button>유니폼</button>
-                <button>기타</button>
-              </div>
               <Select
                 items={TEAM_LIST}
                 value={team}

@@ -75,20 +75,9 @@
 
   .dexFilter {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 16px;
-
-    .categoryBtns {
-      button {
-        margin-right: 8px;
-        padding: 4px 10px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        background: #f1f1f1;
-        cursor: pointer;
-      }
-    }
   }
 
   .dexGrid {
