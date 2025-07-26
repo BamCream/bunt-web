@@ -1,6 +1,5 @@
 .pageTemplate {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--Backgroud-Neutral);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { path } from 'src/constants/path/path'
 import PageTemplate from 'src/components/common/pageSection'
+import Dict from 'src/components/ui/dict'
 
 const Router = () => {
   return (
@@ -8,6 +9,7 @@ const Router = () => {
       <Routes>
         {/* 나중에 상수형으로 수정 */}
         <Route path="/" element={<PageTemplate />}></Route>
+        <Route path="/dict" element={<Dict />} />
       </Routes>
     </BrowserRouter>
   )
